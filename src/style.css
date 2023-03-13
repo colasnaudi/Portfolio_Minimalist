@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    background-color: white;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                                   HEADER                                   */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    text-align: center;
+    font-family: "Barrio", cursive;
+    margin-top: 5%;
+}
+
+.title a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                                    MAIN                                    */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 5% 0;
+}
+
+.item {
+    padding: 5%;
+    text-align: center;
+}
+
+.item p {
+    font-size: 1.7rem;
+    font-family: "Barrio", cursive;
+    text-decoration: none;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.container img {
+    width: 60%;
+    object-fit: cover;
+    border: 10px double #000;
+    border-radius: 50%;
+}
+
+.container img:hover {
+    transform: scale(1.05);
+    transition: all ease-in 0.2s;
+}
+
+@media screen and (max-width: 900px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .container img {
+        width: 50%;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                                   FOOTER                                   */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+footer {
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: "Barrio", cursive;
+}
+
+.social i {
+    color: black;
+    font-size: 2rem;
+    margin: 20px;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                                  CAROUSEL                                  */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin: 100px 80px;
+    grid-gap: 40px;
+}
+
+.project-item {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(33, 33, 33);
+}
+
+.project-item:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: rgb(33, 33, 33);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+    .text {
+        font-size: 10px;
+    }
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+/*                                    UIUX                                    */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+.project-title {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 3em;
+    font-family: "Akronim", cursive;
+}
+
+.uiux-grid {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    grid-gap: 20px;
+    margin: 40px 30px;
+}
+
+.uiux-grid-item {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.uiux-grid-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.uiux-grid-item p {
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width: 1000px) {
+    .uiux-grid {
+        grid-template-columns: 400px 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .uiux-grid {
+        grid-template-columns: 1fr;
+        grid-gap: 50px;
+    }
+}
+
+.title-maquettes {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 1.5em;
+    font-family: "Montserrat", sans-serif;
+}
+
+.uiux-grid-maquettes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    margin: 40px 30px 60px 30px;
+}
+
+.uiux-grid-maquettes-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 950px) {
+    .uiux-grid-maquettes {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .uiux-grid-maquettes {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .uiux-grid-maquettes {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
